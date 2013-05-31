@@ -3,7 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Demo</title>
-<link rel="stylesheet" href="css/css.css"
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/accordion.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 </head>
 
 <body>
@@ -58,26 +61,67 @@
                 <a href="#"><img src="images/adv5.gif" alt="" /></a>
             </div>
         </div><!--end #first-sidebar-->
-        
+
         <div id="main-content">
-            
+
         </div><!--end #main-content-->
-        
+
         <div id="second-sidebar">
             <div class="typical">
                 <h2>Login</h2>
-                <form action="../../../inetpub/wwwroot/mysite/check_logim.asp" method="post" id="login">
+                <form action="" method="post" id="login" name="login" onsubmit="return validateLogin()">
                     <label>Username: </label>
-                    <input type="text" name="" id="user" value="" />
+                    <input type="text" name="user" id="user" value="" />
                     <label>Password: </label>
-                    <input type="password" name="" id="pass" value="" />
+                    <input type="password" name="pass" id="pass" value="" />
                     <ul>
                         <li><a href="#">Forgot Password</a></li>
                         <li><a href="#">Sign in</a></li>
                     </ul>
-                    <input type="submit" name="" id="submit" value="Login" />
+                    <input type="submit" name="login-submit" id="submit" value="Login" />
                 </form>
             </div>
+
+            <div class="typical">
+                <h2>Accordion Menu</h2>
+                <ul class="accordion_menu">
+                    <li><a href="#">Random</a>
+                        <ul class="sub-menu" style="display: block; ">
+                            <li><a href="#" target="_blank"><em>01</em>Trang chủ</a></li>
+                            <li><a href="#" target="_blank"><em>02</em>Giới thiệu</a></li>
+                            <li><a href="#" target="_blank"><em>03</em>Dịch vụ</a></li>
+                            <li><a href="#" target="_blank"><em>04</em>Dự án</a></li>
+                            <li><a href="#" target="_blank"><em>05</em>Blog - Bài viết</a></li>
+                            <li><a href="#" target="_blank"><em>06</em>Liên hệ</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="">Latest</a>
+                        <ul class="sub-menu" style="display: none; ">
+                            <li><a href="#" target="_blank"><em>01</em>Trang chủ</a></li>
+                            <li><a href="#" target="_blank"><em>02</em>Giới thiệu</a></li>
+                            <li><a href="#" target="_blank"><em>03</em>Dịch vụ</a></li>
+                            <li><a href="#" target="_blank"><em>04</em>Dự án</a></li>
+                            <li><a href="#" target="_blank"><em>05</em>Blog - Bài viết</a></li>
+                            <li><a href="#" target="_blank"><em>06</em>Liên hệ</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="">Popular</a>
+                        <ul class="sub-menu" style="display: none; ">
+                            <li><a href="#" target="_blank"><em>01</em>Trang chủ</a></li>
+                            <li><a href="#" target="_blank"><em>02</em>Giới thiệu</a></li>
+                            <li><a href="#" target="_blank"><em>03</em>Dịch vụ</a></li>
+                            <li><a href="#" target="_blank"><em>04</em>Dự án</a></li>
+                            <li><a href="#" target="_blank"><em>05</em>Blog - Bài viết</a></li>
+                            <li><a href="#" target="_blank"><em>06</em>Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </div><!--end #second-sidebar-->
     </div><!--end #content-wrap-->
 
@@ -103,7 +147,7 @@
             tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
     </div><!--end #footer-->
-    <p>Copyright © 2013 by Trong Nghia</p>
+    <p id="copyright">Copyright © 2013 by Trong Nghia</p>
 
 </div><!--end #container-->
 </body>
